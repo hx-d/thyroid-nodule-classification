@@ -1,0 +1,167 @@
+{
+  "model": "ResNet50 (ImageNet pretrained, layer3/layer4/fc fine-tuned, weighted CE loss)",
+  "dataset": "TN5000_forReview (train 3500 / val 500 / test 1000)",
+  "epochs": 20,
+  "batch_size": 32,
+  "lr": 0.0001,
+  "scheduler": "StepLR(step=7, gamma=0.1)",
+  "note": "v2: 解冻layer3/4分层微调+逆频率加权损失，修复v1塌缩到多数类的问题",
+  "best_val_acc": 90.2,
+  "test_acc": 89.2,
+  "test_loss": 0.416,
+  "confusion_matrix": [
+    [
+      219,
+      50
+    ],
+    [
+      58,
+      673
+    ]
+  ],
+  "classification_report": "              precision    recall  f1-score   support\n\n   Benign(0)     0.7906    0.8141    0.8022       269\nMalignant(1)     0.9308    0.9207    0.9257       731\n\n    accuracy                         0.8920      1000\n   macro avg     0.8607    0.8674    0.8640      1000\nweighted avg     0.8931    0.8920    0.8925      1000\n",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6483,
+      "train_acc": 63.7714,
+      "val_loss": 0.4865,
+      "val_acc": 80.4
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.4892,
+      "train_acc": 76.0857,
+      "val_loss": 0.3966,
+      "val_acc": 85.6
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.3908,
+      "train_acc": 83.6857,
+      "val_loss": 0.4028,
+      "val_acc": 80.6
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.3215,
+      "train_acc": 86.2857,
+      "val_loss": 0.3685,
+      "val_acc": 87.0
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.2922,
+      "train_acc": 88.0286,
+      "val_loss": 0.3335,
+      "val_acc": 87.8
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.245,
+      "train_acc": 89.6,
+      "val_loss": 0.4051,
+      "val_acc": 83.4
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.2138,
+      "train_acc": 91.0857,
+      "val_loss": 0.3453,
+      "val_acc": 87.2
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.1656,
+      "train_acc": 93.2,
+      "val_loss": 0.3754,
+      "val_acc": 89.4
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.1486,
+      "train_acc": 93.7429,
+      "val_loss": 0.3803,
+      "val_acc": 89.2
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.141,
+      "train_acc": 94.4,
+      "val_loss": 0.3932,
+      "val_acc": 89.4
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.1127,
+      "train_acc": 95.4286,
+      "val_loss": 0.4206,
+      "val_acc": 90.2
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.1214,
+      "train_acc": 95.6,
+      "val_loss": 0.4258,
+      "val_acc": 89.4
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.1097,
+      "train_acc": 95.8,
+      "val_loss": 0.4209,
+      "val_acc": 89.6
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.1048,
+      "train_acc": 96.0,
+      "val_loss": 0.4358,
+      "val_acc": 89.6
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.0995,
+      "train_acc": 96.8286,
+      "val_loss": 0.4742,
+      "val_acc": 89.8
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.0917,
+      "train_acc": 96.6571,
+      "val_loss": 0.4536,
+      "val_acc": 89.0
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.0944,
+      "train_acc": 96.7143,
+      "val_loss": 0.4502,
+      "val_acc": 88.8
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.102,
+      "train_acc": 96.0,
+      "val_loss": 0.4386,
+      "val_acc": 89.0
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.0945,
+      "train_acc": 96.3143,
+      "val_loss": 0.4266,
+      "val_acc": 89.8
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.0856,
+      "train_acc": 96.6,
+      "val_loss": 0.4464,
+      "val_acc": 89.4
+    }
+  ],
+  "elapsed_min": 13.7,
+  "best_weight": "E:\\pythoncharm\\改进ResNet50的甲状腺结节良恶性识别\\best_resnet50_thyroid_ft.pth"
+}

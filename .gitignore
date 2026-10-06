@@ -1,0 +1,16 @@
+# datasets & large model weights are NOT committed
+data/
+*.pth
+*.pt
+*.rar
+results/best_model_*.pth
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/

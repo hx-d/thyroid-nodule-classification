@@ -1,0 +1,39 @@
+device: cuda | batch: 32 | epochs: 20 | lr: 0.0001
+train: 3500 | val: 500 | test: 1000
+label counts: [1032, 2468] -> loss weights: [1.696, 0.709]
+Epoch 01/20 | train_loss=0.6483 train_acc=63.77% | val_loss=0.4865 val_acc=80.40% | best_val_acc=80.40%
+Epoch 02/20 | train_loss=0.4892 train_acc=76.09% | val_loss=0.3966 val_acc=85.60% | best_val_acc=85.60%
+Epoch 03/20 | train_loss=0.3908 train_acc=83.69% | val_loss=0.4028 val_acc=80.60% | best_val_acc=85.60%
+Epoch 04/20 | train_loss=0.3215 train_acc=86.29% | val_loss=0.3685 val_acc=87.00% | best_val_acc=87.00%
+Epoch 05/20 | train_loss=0.2922 train_acc=88.03% | val_loss=0.3335 val_acc=87.80% | best_val_acc=87.80%
+Epoch 06/20 | train_loss=0.2450 train_acc=89.60% | val_loss=0.4051 val_acc=83.40% | best_val_acc=87.80%
+Epoch 07/20 | train_loss=0.2138 train_acc=91.09% | val_loss=0.3453 val_acc=87.20% | best_val_acc=87.80%
+Epoch 08/20 | train_loss=0.1656 train_acc=93.20% | val_loss=0.3754 val_acc=89.40% | best_val_acc=89.40%
+Epoch 09/20 | train_loss=0.1486 train_acc=93.74% | val_loss=0.3803 val_acc=89.20% | best_val_acc=89.40%
+Epoch 10/20 | train_loss=0.1410 train_acc=94.40% | val_loss=0.3932 val_acc=89.40% | best_val_acc=89.40%
+Epoch 11/20 | train_loss=0.1127 train_acc=95.43% | val_loss=0.4206 val_acc=90.20% | best_val_acc=90.20%
+Epoch 12/20 | train_loss=0.1214 train_acc=95.60% | val_loss=0.4258 val_acc=89.40% | best_val_acc=90.20%
+Epoch 13/20 | train_loss=0.1097 train_acc=95.80% | val_loss=0.4209 val_acc=89.60% | best_val_acc=90.20%
+Epoch 14/20 | train_loss=0.1048 train_acc=96.00% | val_loss=0.4358 val_acc=89.60% | best_val_acc=90.20%
+Epoch 15/20 | train_loss=0.0995 train_acc=96.83% | val_loss=0.4742 val_acc=89.80% | best_val_acc=90.20%
+Epoch 16/20 | train_loss=0.0917 train_acc=96.66% | val_loss=0.4536 val_acc=89.00% | best_val_acc=90.20%
+Epoch 17/20 | train_loss=0.0944 train_acc=96.71% | val_loss=0.4502 val_acc=88.80% | best_val_acc=90.20%
+Epoch 18/20 | train_loss=0.1020 train_acc=96.00% | val_loss=0.4386 val_acc=89.00% | best_val_acc=90.20%
+Epoch 19/20 | train_loss=0.0945 train_acc=96.31% | val_loss=0.4266 val_acc=89.80% | best_val_acc=90.20%
+Epoch 20/20 | train_loss=0.0856 train_acc=96.60% | val_loss=0.4464 val_acc=89.40% | best_val_acc=90.20%
+
+===== TEST RESULT (best epoch by val) =====
+Test Accuracy: 89.20% | Test Loss: 0.4160
+[[219  50]
+ [ 58 673]]
+              precision    recall  f1-score   support
+
+   Benign(0)     0.7906    0.8141    0.8022       269
+Malignant(1)     0.9308    0.9207    0.9257       731
+
+    accuracy                         0.8920      1000
+   macro avg     0.8607    0.8674    0.8640      1000
+weighted avg     0.8931    0.8920    0.8925      1000
+
+
+results saved -> E:\pythoncharm\改进ResNet50的甲状腺结节良恶性识别\thyroid_ft_results.json
